@@ -1,20 +1,19 @@
 package main.entities;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 
 public class Jugador implements Serializable {
     private static final long serialVersionUID = 239329L;
 
     private String nombre;
-    private String edad;
-    private String estatura;
-    private String Peso;
+    private Integer edad;
+    private Integer estatura;
+    private Integer Peso;
     private String Nacionalidad;
     private String Club;
     private String camiseta;
-    private LocalDate fechaNacimiento;
+    private String fechaNacimiento;
 
 
 
@@ -26,26 +25,26 @@ public class Jugador implements Serializable {
         this.nombre = nombre;
     }
 
-   public String getEdad() {return edad;
+   public Integer getEdad() {return edad;
    }
 
-   public void setEdad(String edad) {
+   public void setEdad(Integer edad) {
        this.edad = edad;
    }
 
-    public String getEstatura() {
+    public Integer getEstatura() {
         return estatura;
     }
 
-    public void setEstatura(String estatura) {
+    public void setEstatura(Integer estatura) {
         this.estatura = estatura;
     }
 
- public String getPeso() {
+ public Integer getPeso() {
        return Peso;
     }
 
-    public void setPeso(String peso) {
+    public void setPeso(Integer peso) {
        Peso = peso;
    }
 
@@ -72,26 +71,18 @@ public class Jugador implements Serializable {
     public void setCamiseta(String camiseta) {
         this.camiseta = camiseta;
     }
-    public LocalDate getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public Jugador(String cristiano, int i, String estatura, String peso, String portugal, String realMadrid, String camiseta, LocalDate parse) {}
+    public Jugador(){
 
-    public Jugador(String nombre, String edad, String estatura, String Peso, String Nacionalidad, String Club, String Camiseta, LocalDate fechaNacimiento) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.estatura = estatura;
-        this.Peso = Peso;
-        this.Nacionalidad = Nacionalidad;
-        this.Club = Club;
-        this.camiseta = camiseta;
-        this.fechaNacimiento = fechaNacimiento;
     }
+
 
     @Override
     public String toString() {

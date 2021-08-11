@@ -1,6 +1,9 @@
+package main;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+
 
 
 public class Main2 {
@@ -9,17 +12,13 @@ public class Main2 {
     public static void main(String[] args) {
 
         HashMap data = new HashMap();
-        ArrayList<String> info = new ArrayList<>();
-        info.add("1");
-        info.add("2");
-        info.add("3");
-        info.add("4");
-        data.put(1, info);
-        ArrayList<String> info2 = new ArrayList<>();
-        info2.add("1");
-        info2.add("2");
-        info2.add("3");
-        data.put(2, info2);
+        ArrayList<String> jugador = new ArrayList<>();
+        jugador.add("Pais");
+        jugador.add("Estatura");
+        jugador.add("Peso");
+        jugador.add("Edad");
+        data.put(1, jugador);
+
         try {
             FileOutputStream f = new FileOutputStream(new File("C:\\Users\\lolit\\Simulacion2\\misObjetos.dat"));
             ObjectOutputStream o = new ObjectOutputStream(f);
@@ -34,10 +33,10 @@ public class Main2 {
             ObjectInputStream oi = new ObjectInputStream(fi);
 
             // Read objects
-            HashMap j1 = (HashMap) oi.readObject();
+            HashMap pr1 = (HashMap) oi.readObject();
 
-            System.out.println(((ArrayList)j1.get(1)).size());
-            System.out.println(((ArrayList)j1.get(1)).get(2));
+            System.out.println(((ArrayList)pr1.get(1)).size());
+            System.out.println(((ArrayList)pr1.get(1)).get(2));
 
 
             oi.close();
